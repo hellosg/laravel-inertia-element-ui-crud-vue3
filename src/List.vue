@@ -125,7 +125,7 @@
 
 <script>
 import Helpers from './Helper.vue'
-import { Search } from '@element-plus/icons'
+import { Search } from '@element-plus/icons-vue'
 import { markRaw } from "vue";
 export default {
     mixins: [ Helpers ],
