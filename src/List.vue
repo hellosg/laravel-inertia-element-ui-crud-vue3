@@ -67,7 +67,7 @@
                                  :label="column.title"
                                  :width="column.width"
                                  :sortable="column.sortable" >
-                    <template #default="scope">
+                    <template #default="scope" v-if="scope">
                         <slot :name="column.name" :row="scope.row">{{ fromDotNotation(scope.row, column.name) }}</slot>
                     </template>
                 </el-table-column>
@@ -79,7 +79,7 @@
                     header-align="center"
                     align="right"
                 >
-                    <template #default="scope">
+                    <template #default="scope" v-if="scope">
                         <slot name="action_before" :row="scope.row"></slot>
                         <slot name="action" :row="scope.row">
                             <el-button
